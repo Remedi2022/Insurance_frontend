@@ -1,0 +1,91 @@
+.leftnav {
+    flex: 1;
+    height: 100vh;
+    /* position: sticky; */
+    /* top: 50px; */
+    border-right: 2.4px solid #f0f0f0;
+    /* position: relative; */
+}
+
+.leftnavWrapper {
+    padding: 8px;
+    /* color: #444; */
+}
+
+/* .leftnavMenu {
+    margin-bottom: 10px;
+} */
+
+.leftnavTitle {
+    font-size: 1.1rem;
+    /* color: #555; */
+    text-align: center;
+    margin-top: 4px;
+}
+
+.leftnavList {
+    font-size: 1rem;
+    color: #777;
+    font-weight: bold;
+    list-style: none;
+    padding: 2px;
+}
+
+.leftnavListItem {
+    font-size: 0.9rem;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.leftnavListItem.active,
+.leftnavListItem:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+.leftnavListItem img {
+    width: 1rem;
+    height: 1rem;
+    /* object-fit: contain; */
+    margin-right: 0.7rem;
+}
+
+.toggleMenu {
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 30px;
+    margin-left: 8px;
+    color: #777;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*
+.leftnavTitle a:link{
+    text-decoration:none;
+}
+.leftnavTitle a:visited{
+    text-decoration:none;
+    color:black;
+}
+.leftnavTitle a:hover{
+    text-decoration:none;
+    color:#779FFF;
+}
+*/
+
+.leftnavList a:link{
+    text-decoration:none;
+}
+ 
+.leftnavList a:visited{
+    text-decoration:none;
+    color:#777;
+}
+
+.leftnavList a:hover {
+    text-decoration:none;
+    color:#779FFF;
+}
