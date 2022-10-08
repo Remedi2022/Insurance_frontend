@@ -17,6 +17,7 @@ function Content() {
                     </div>
                     {/* </div> */}
                 </div>
+
                 <div className="homeMenuItem">
                     <span className="homeMenuItemTitle">새로운 접수</span>
                     <span className="homeMenuItemDetail">이름: 이가영</span>
