@@ -29,7 +29,6 @@ export default function LeftNav() {
             </Link>
           </ul>
         </div>
-        <span className='toggleMenu'>《 메뉴 접기</span>
       </div>
     </div>
   )

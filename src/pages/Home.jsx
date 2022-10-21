@@ -25,40 +25,40 @@ function Content() {
     if (error) return <div>에러가 발생했습니다</div>;
     if (!users) return (
         <div className="content">
-            <div className="fecthButton">
-                <button onClick={refetch}>불러오기</button>       
+            <div className="fecthMenu">
+                <button className="fecthMenuButton" onClick={refetch}>접수 목록 불러오기</button>       
             </div>
         </div>
     )
 
     return (
         <div className="content">
+            <div className="fecthMenuAgain">
+                <button className="fecthMenuButton" onClick={refetch}>목록 새로고침</button>
+            </div>
             <div className="homeMenu">
-                
                 {users.map(user => (
                     <div className="homeMenuItem">
                         <span className="homeMenuItemTitle">새로운 접수</span>
                         <span className="homeMenuItemDetail">
                         <li
                             key={user.id}
-                            onClick={() => setUserId(user.id)}
-                            style={{ cursor: 'pointer' }}
                         >
                             {user.username} ({user.name})
                         </li>
                         </span>
                         {/* <div className="buttonWrapper"> */}
                         <div className="homeMenuButton">
-                            <Link to = "/Administration">
-                                <button>확인</button>
-                            </Link>
+                            <button
+                            className="homeMenuItemButton"
+                            onClick={() => setUserId(user.id)}
+                            style={{ cursor: 'pointer' }}>확인</button>
                         </div>
                         {/* </div> */}
                     </div>
                 ))}
                 
             </div>
-            <button onClick={refetch}>다시 불러오기</button>
             {userId && <User id={userId} />}
         </div>
     )
