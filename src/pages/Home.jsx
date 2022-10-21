@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import useAsync from './useAsync';
 import User from './User';
+import UseModal from './UseModal';
 
 
 // <button onClick={refetch}>불러오기</button>;
@@ -26,7 +27,7 @@ function Content() {
     if (!users) return (
         <div className="content">
             <div className="fecthMenu">
-                <button className="fecthMenuButton" onClick={refetch}>접수 목록 불러오기</button>       
+                <button className="fecthMenuButton" onClick={refetch}>목록 불러오기</button>       
             </div>
         </div>
     )
@@ -47,14 +48,15 @@ function Content() {
                             {user.username} ({user.name})
                         </li>
                         </span>
-                        {/* <div className="buttonWrapper"> */}
                         <div className="homeMenuButton">
-                            <button
+                            {/*
+                                <button
                             className="homeMenuItemButton"
                             onClick={() => setUserId(user.id)}
                             style={{ cursor: 'pointer' }}>확인</button>
+                */}
+                            <UseModal></UseModal>
                         </div>
-                        {/* </div> */}
                     </div>
                 ))}
                 
