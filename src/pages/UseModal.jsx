@@ -29,7 +29,7 @@ function UseModal() {
         <div>
             <button className="modalOpenButton" onClick={openModal}>접수 시작하기</button>
             {/* header 부분에 텍스트를 입력한다. */}
-            <Modal open={modalOpen} close={closeModal} header="신규 환자 등록">
+            <Modal open={modalOpen} close={closeModal} header="신규 접수">
                 {/* Modal.js <main> {props.children} </main>에 입력되는 내용. 리액트 함수형 모달 */}
                 <div className="patientRegistration">
                     {/* <div className="title">
