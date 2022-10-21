@@ -128,3 +128,19 @@
 .termsWrapper {
     width: 300px;
 }
+
+.modalOpenButton {
+    align-self: flex-end;
+    flex-direction: row;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modalOpenButton:hover{ 
+    /*  // 버튼 색 바꾸는 것 background-color: ; */
+    color:#779FFF;
+}

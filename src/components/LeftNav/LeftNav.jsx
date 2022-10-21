@@ -11,19 +11,16 @@ export default function LeftNav() {
           <ul className='leftnavList'>
           <Link to = "/">
             <li className='leftnavListItem'>
-              <img className='homeIcon' src={ process.env.PUBLIC_URL + '/icons/home50_555.png' } />
               홈
               </li>
             </Link>
             <Link to = "/Administration">
               <li className='leftnavListItem'>
-              <img className='homeIcon' src={ process.env.PUBLIC_URL + '/icons/administration50_555.png' } />
               원무
               </li>
             </Link>
             <Link to = "/Examination">
             <li className='leftnavListItem'>
-              <img className='homeIcon' src={ process.env.PUBLIC_URL + '/icons/doctor50_555.png' } />
               진료
               </li>
             </Link>

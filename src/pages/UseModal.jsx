@@ -2,64 +2,6 @@ import './UseModal.css'
 import React, { useEffect, useState } from 'react';
 import Modal from '../components/Modal/Modal';
 
-////////////////////////////////////////////////////////////////////////
-// import React, { useEffect, useState } from 'react';
-// import DaumPostcode from 'react-daum-postcode';
-
-// function Postcode() {
-
-//   const [address, setAddress] = useState(''); // 주소
-//   const [addressDetail, setAddressDetail] = useState(''); // 상세주소
-
-//   const [OpenPost, setOpenPost] = useState(false);
-
-//   const onChangeOpenPost = () => {
-//     setOpenPost(!OpenPost);
-//   };
-
-//   const onCompletePost = (data) => {
-//     let fullAddr = data.address;
-//     let extraAddr = '';
-
-//     if (data.addressType === 'R') {
-//       if (data.bname !== '') {
-//         extraAddr += data.bname;
-//       }
-//       if (data.buildingName !== '') {
-//         extraAddr += ( extraAddr !== '' ? `, ${data.buildingName}` : data.buildingName );
-//       }
-//       fullAddr += ( extraAddr !== '' ? ` (${extraAddr})` : '' );
-//     }
-
-//     console.log(data)
-//     setAddress(data.zonecode);
-//     setAddressDetail(fullAddr);
-//     setOpenPost(false);
-//   };
-
-//   const postCodeStyle = {
-//     display: 'block',
-//     position: 'relative',
-//     top: '0%',
-//     width: '400px',
-//     height: '400px',
-//     padding: '7px',
-//   };
-
-//   return (
-//     <>
-//         <button type='button' onClick={onChangeOpenPost}>우편번호 검색</button>
-//         {OpenPost ? (
-//             <DaumPostcode style={postCodeStyle} autoClose onComplete={onCompletePost} />
-//             ) : null}
-//     </>
-//   );
-// };
-
-// export default SignUp;
-////////////////////////////////////////////////////////////////////////
-
-
 function UseModal() {
     // useState를 사용하여 open상태를 변경한다. (open일 때 true로 만들어 열리는 방식)
     const [modalOpen, setModalOpen] = useState(false);
@@ -85,7 +27,7 @@ function UseModal() {
 
     return (
         <div>
-            <button onClick={openModal}>접수 시작하기</button>
+            <button className="modalOpenButton" onClick={openModal}>접수 시작하기</button>
             {/* header 부분에 텍스트를 입력한다. */}
             <Modal open={modalOpen} close={closeModal} header="신규 환자 등록">
                 {/* Modal.js <main> {props.children} </main>에 입력되는 내용. 리액트 함수형 모달 */}
