@@ -7,21 +7,21 @@ export default function LeftNav() {
     <div className='leftnav'>
       <div className='leftnavWrapper'>
         <div className='leftnavMenu'>
-          <h3 className='leftnavTitle'>OO보험</h3>
+          <h3 className='leftnavTitle'>연수보험</h3>
           <ul className='leftnavList'>
           <Link to = "/">
             <li className='leftnavListItem'>
               홈
               </li>
             </Link>
-            <Link to = "/Administration">
+            <Link to = "/Notice">
               <li className='leftnavListItem'>
-              원무
+              공지사항
               </li>
             </Link>
             <Link to = "/Examination">
             <li className='leftnavListItem'>
-              진료
+             
               </li>
             </Link>
           </ul>

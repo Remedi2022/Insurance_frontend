@@ -9,7 +9,7 @@
 .content {
     flex: 12;
     flex-direction: column;
-    background-color: rgb(214, 222, 234);
+    background-color: #d6deea;
     /* position: relative; */
     display: flex;
 /*    justify-content: center;*/
@@ -118,4 +118,10 @@
 .fecthMenuButton:hover{ 
     /*  // 버튼 색 바꾸는 것 background-color: ; */
     color:#779FFF;
+}
+
+.patientRegistration {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
