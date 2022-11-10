@@ -1,0 +1,47 @@
+[
+  {
+    "id" : 1,
+    "name" : "이연수",
+    "phone" : "010-1122-3344",
+		"examination" : "진료내용진료내용1234",
+		"diagnosis" : "지루성피부염",
+		"prescription" : "지루성피부염",
+		"consultation_fee" : 1,
+		"vid" : 1,
+		"pid" : "000001",
+		"did" : "127382",
+    "individual_copayment" : 40000,
+    "nhis_copayment" : 80000,
+    "uninsured_payment" : 5000
+  },
+  {
+    "id" : 2,
+    "name" : "우성주",
+    "phone" : "010-2233-3344",
+		"examination" : "진료내용진료내용1234",
+		"diagnosis" : "지루성피부염",
+		"prescription" : "지루성피부염",
+		"consultation_fee" : 1,
+		"vid" : 1,
+		"pid" : "000001",
+		"did" : "127382",
+    "individual_copayment" : 40000,
+    "nhis_copayment" : 80000,
+    "uninsured_payment" : 5000
+  },
+  {
+    "id" : 3,
+    "name" : "박선민",
+    "phone" : "010-3344-5566",
+		"examination" : "진료내용진료내용1234",
+		"diagnosis" : "지루성피부염",
+		"prescription" : "지루성피부염",
+		"consultation_fee" : 1,
+		"vid" : 1,
+		"pid" : "000001",
+		"did" : "127382",
+    "individual_copayment" : 40000,
+    "nhis_copayment" : 80000,
+    "uninsured_payment" : 5000
+  }
+]

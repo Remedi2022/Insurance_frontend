@@ -144,3 +144,8 @@
     /*  // 버튼 색 바꾸는 것 background-color: ; */
     color:#779FFF;
 }
+
+.infoContent {
+    display: flex;
+    flex-direction: row;
+}
