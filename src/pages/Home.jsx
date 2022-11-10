@@ -49,13 +49,12 @@ function Content() {
                         </li>
                         </span>
                         <div className="homeMenuButton">
-                            {/*
+                            
                                 <button
                             className="homeMenuItemButton"
                             onClick={() => setUserId(user.id)}
                             style={{ cursor: 'pointer' }}>확인</button>
-                */}
-                            <UseModal></UseModal>
+                            
                         </div>
                     </div>
                 ))}
