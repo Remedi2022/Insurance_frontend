@@ -5,7 +5,7 @@ import getUsers from './Home';
 import User from './User';
 import useAsync from './useAsync';
 
-function UseModal({myID}) {
+function UseModal({ myID }) {
     // useState를 사용하여 open상태를 변경한다. (open일 때 true로 만들어 열리는 방식)
     const [modalOpen, setModalOpen] = useState(false);
     const [popup, setPopup] = useState(false);
@@ -30,8 +30,7 @@ function UseModal({myID}) {
 
     return (
         <div>
-            <button className="modalOpenButton" onClick={() => 
-            {
+            <button className="modalOpenButton" onClick={() => {
                 setModalOpen(true);
                 setUserId(myID);
             }}>접수 시작하기</button>
@@ -43,7 +42,7 @@ function UseModal({myID}) {
                     {/* <div className="title">
                         신환 등록
                     </div> */}
-                    
+
                     {/* <div className="buttonWrapperRegister">
                         <button className="Button">취소</button>
                         <button className="Button">완료</button>

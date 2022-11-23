@@ -1,10 +1,12 @@
 .noticeContent {
-    padding:30px;
-    /* border-top: 1px solid #dee2e6; */
-    /* border-bottom: 1px solid #dee2e6; */
-    padding-left: 100px;
-    padding-right: 100px;
+    
+    flex: 12;
+    flex-direction: column;
     background-color: white;
+    /* position: relative; */
+    display: flex;
+/*    justify-content: center;*/
+    align-items: flex-start;
 }
 
 .infoMain {

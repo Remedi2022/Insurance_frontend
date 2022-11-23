@@ -8,8 +8,8 @@ import Modal from '../components/Modal/Modal';
 
 // <button onClick={refetch}>불러오기</button>;
 
-  
-function Content({Userdata}) {
+
+function Content({ Userdata }) {
     // const [users, setUsers] = useState(null);
     // const [loading, setLoading] = useState(false);
     // const [error, setError] = useState(null);
@@ -29,12 +29,12 @@ function Content({Userdata}) {
     //         );
     //         setUsers(response.data); // 데이터는 response.data 안에 들어있습니다.
     //       } catch (e) {
-    
+
     //         setError(e);
     //       }
     //       setLoading(false);
     //     };
-    
+
     //     fetchUsers();
     //   }, []);
 
@@ -80,66 +80,66 @@ function Content({Userdata}) {
     //                     </div>
     //                 </div>
     //             ))}
-                
+
     //         </div>
     //     </div>
     // )
-    
+
 
     const [userId, setUserId] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
     const closeModal = () => {
-            setModalOpen(false);
-        };
+        setModalOpen(false);
+    };
 
     return (
-            <div className="content">
-                <div className="homeMenu">
-                    {Userdata.map(user => (
-                        <div className="homeMenuItem">
-                            <span className="homeMenuItemTitle">접수 시작하기</span>
-                            <span className="homeMenuItemDetail">
+        <div className="content">
+            <div className="homeMenu">
+                {Userdata.map(user => (
+                    <div className="homeMenuItem">
+                        <span className="homeMenuItemTitle">접수 시작하기</span>
+                        <span className="homeMenuItemDetail">
                             <li
                                 key={user.id}
                             >
                                 {user.name}
                                 ({user.phone})
                             </li>
-                            </span>
-                            <div className="homeMenuButton">
-                                <button
-                                    className="homeMenuItemButton"
-                                    onClick={() => {setUserId(user.id); setModalOpen(true);}}
-                                    style={{ cursor: 'pointer' }}>확인
-                                </button>
-                                <Modal open={modalOpen} close={closeModal} header="" data={user}>
+                        </span>
+                        <div className="homeMenuButton">
+                            <button
+                                className="homeMenuItemButton"
+                                onClick={() => { setUserId(user.id); setModalOpen(true); }}
+                                style={{ cursor: 'pointer' }}>확인
+                            </button>
+                            <Modal open={modalOpen} close={closeModal} header="" data={user}>
                                 {/* Modal.js <main> {props.children} </main>에 입력되는 내용. 리액트 함수형 모달 */}
-                                    <div className="patientRegistration">
-                                    </div>
-                                </Modal>
-                            </div>
+                                <div className="patientRegistration">
+                                </div>
+                            </Modal>
                         </div>
-                    ))}
-                    
-                </div>
+                    </div>
+                ))}
+
             </div>
-        )
+        </div>
+    )
 }
 
-export default function Home({Userdata}) {
+export default function Home({ Userdata }) {
     return (
         <div className="Home">
             <div className="container">
                 <LeftNav />
-                <Content Userdata = {Userdata} />
+                <Content Userdata={Userdata} />
                 {/* <div className=""> page </div> */}
             </div>
         </div>
 
-    // <div class="container">
-	//     <div class="item">LEFT_NAV</div>
-	//     <div class="item">MAIN</div>
-	//     <div class="item">helloflex</div>
-    // </div>
+        // <div class="container">
+        //     <div class="item">LEFT_NAV</div>
+        //     <div class="item">MAIN</div>
+        //     <div class="item">helloflex</div>
+        // </div>
     )
 }
