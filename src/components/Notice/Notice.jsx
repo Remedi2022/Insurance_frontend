@@ -2,9 +2,15 @@ import hl7parser from 'hl7parser'
 import LeftNav from "../LeftNav/LeftNav"
 import './Notice.css'
 
-function Content() {
+function Content(props) {
+    const { data } = props;
 
-    var message = hl7parser.create("MSH|^~.&|||||20221113034406||EHC^E01^EHC_E01|123|P|2.6||||||||||||||\rIVC|1|||OR|NORM|FN|20221113034406|202970&KRW||레메디피부과의원^^^^^^^^^2221166666|SJlife||||||||^박^의사||||||AMB||||||\rPSS|1||1|202970&KRW|보험사제출서류|\rPSG|1||1|Y|16970&KRW|진찰료|\rPID|||27^^^^PI~1805314025145^^^^SS||류^수지|\rIN1|1|NHI|NHIS||||||||||||||||||||||||||||||||||5091&KRW|||||||||||||||||||\rIN2|||||||||||||||||||||||||||||MMD^^^AT&11879&KRW||||||||||||||||||||||||\rPSL|1||1|||P|AA||초진진찰료|20221113034204|||16970&KRW|1|16970&KRW|5091&KRW|||||Y|||||||1||||||||||||||||||||1|\rPSG|2||2|Y|186000&KRW|투약료|\rPSL|1||1|||P|L281||아토베리어 잇칭 크림 MD|20221113034204|||62000&KRW|1|62000&KRW|62000&KRW|||||Y|||||||2||||||||||||||||||||1|\rPSL|2||2|||P|L209||더마베이비 프로 크림 MD|20221112034204|||62000&KRW|2|124000&KRW|124000&KRW|||||Y|||||||2||||||||||||||||||||1|");
+    //console.log(data)
+
+    var message = hl7parser.create("MSH|^~.&|||||20221113034406||EHC^E01^EHC_E01|123|P|2.6||||||||||||||\rIVC|1|||OR|NORM|FN|20221113034406|202970&KRW||레메디피부과의원^^^^^^^^^2221166666|SJlife||||||||^박^의사||||||AMB||||||\rPSS|1||1|202970&KRW|보험사제출서류|\rPSG|1||1|Y|16970&KRW|진찰료|\rPID|||27^^^^PI~1805314025145^^^^SS||류^수지|\rIN1|1|NHI|NHIS||||||||||||||||||||||||||||||||||5091&KRW|||||||||||||||||||\rIN2|||||||||||||||||||||||||||||MMD^^^AT&11879&KRW||||||||||||||||||||||||\rPSL|1||1|||P|AA||초진진찰료|20221113034204|||16970&KRW|1|16970&KRW|5091&KRW|||||Y|||||||1||||||||||||||||||||1|\rPSG|2||2|Y|186000&KRW|투약료|\rPSL|1||1|||P|L281||아토베리어 잇칭 크림 MD|20221113034204|||62000&KRW|1|62000&KRW|62000&KRW|||||Y|||||||2||||||||||||||||||||1|\rPSL|2||2|||P|L209||더마베이비 프로 크림 MD|20221112034204|||62000&KRW|2|124000&KRW|124000&KRW|||||Y|||||||2||||||||||||||||||||1|")
+
+    // var message = hl7parser.create(data);
+
 
     var name = message.get("PID.5.1").toString() + message.get("PID.5.2").toString();
     var rrn = message.get("PID.3").get(1).get(0).toString().substring(0, 6) + "-" + message.get("PID.3").get(1).get(0).toString().substring(6);
@@ -25,6 +31,7 @@ function Content() {
     return (
         <div className='noticeContent'>
             <div className='infoMain'>
+                {data}
                 고객 정보
                 <div className='infoContent'>
                     <div className='infoContentTitle'>고객 성명</div>
@@ -118,12 +125,12 @@ function Content() {
     )
 }
 
-export default function Notice() {
+export default function Notice(props) {
+    const { data } = props;
     return (
         <div className="Home">
             <div className="container">
-                <LeftNav />
-                <Content />
+                <Content data={data} />
                 {/* <div className=""> page </div> */}
             </div>
         </div>
