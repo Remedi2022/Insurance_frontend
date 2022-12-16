@@ -20,6 +20,10 @@ npm install -g serve
 <br/>
 npx serve -s build
 
+
+![insurance-home](https://github.com/Remedi2022/Insurance_frontend/blob/934cd10ba32930945ebb541289c0cbbbb64db591/EMR-check.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
