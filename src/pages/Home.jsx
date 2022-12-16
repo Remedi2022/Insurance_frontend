@@ -6,6 +6,7 @@ import User from './User';
 import Modal from '../components/Modal/Modal';
 import hl7parser from 'hl7parser'
 import Notice from '../components/Notice/Notice';
+import { Link } from 'react-router-dom';
 
 
 // <button onClick={refetch}>불러오기</button>;
@@ -77,12 +78,12 @@ function Content({ Userdata }) {
                                 onClick={() => { setUserId(user.id); setModalOpen(false); setUserData(user.hl7); }}
                                 style={{ cursor: 'pointer' }}>확인
                             </button>
-                            <Modal open={modalOpen} close={closeModal} header="상세 정보" data={user}>
-                                {/* Modal.js <main> {props.children} </main>에 입력되는 내용. 리액트 함수형 모달 */}
-                                <div className="patientRegistration">
-                                </div>
-                                {/* {userId && <User id={userId} />} */}
-                            </Modal>
+                           
+                            <Link to="/CheckHL7" data={user}>
+                                <li className='homeMenuItemButton'>
+                                    보험심사
+                                </li>
+                            </Link>
                         </div>
                     </div>
                 ))}
