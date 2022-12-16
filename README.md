@@ -1,3 +1,25 @@
+# Insurance Company Front-end
+
+This repository contains codes for insurance company front-end. You can get HL7 received from cloud EMR.
+
+## Before you get started
+
+You need to change API link into new server link.\
+location: pages/Home.jsx line 32\
+change into "(backend server port/api/hl7/list)"
+
+
+## Run React app
+### Run
+npm start
+
+### Build
+npm run build
+<br/>
+npm install -g serve
+<br/>
+npx serve -s build
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
