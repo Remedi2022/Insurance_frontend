@@ -21,7 +21,14 @@ npm install -g serve
 npx serve -s build
 
 
-![insurance-home](https://github.com/Remedi2022/Insurance_frontend/blob/934cd10ba32930945ebb541289c0cbbbb64db591/EMR-check.png)
+
+## Features
+### Home
+![insurance-home](https://github.com/Remedi2022/Insurance_frontend/blob/b91d36c336f7fc1141a83fb2bdd5c6486e287976/Insurance-Home.png)\
+Whenever insurance company receives HL7 messages, you can check the lists from main home page
+### Check
+![insurance-check](https://github.com/Remedi2022/Insurance_frontend/blob/581b1c429ffffa2243989c84154595050a75a61c/Insurance-check.png)\
+From Home page, when you click the button, the page will be moved into 'check' page. In this page, you can check the information about the patient. It is automatically parsed from HL7.
 
 
 # Getting Started with Create React App
